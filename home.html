@@ -10,18 +10,19 @@
   </canvas>
     <div class="base">
         <img src="pics/ttl-santas-little-helper.png" alt="Title" style="margin-left: 15%;margin-bottom: 15%">
-        <div class="intro">
+        <div class="intro" id="intro">
           <p class="banter">Season's greetings, Simon!</p>
           <p class="banter">I'm your festive, friendly, automated elf-bot. Let's get Christmas sorted.</p>
-        </div>
+
 
               <p class="banter">First things first. Are you looking for:</p>
               <div class="answer-block">
-                  <div onclick="showAnswerBlock('qb2', this)" class="answer-button"><a>Jaw-droppingly brilliant gifts</a></div>
+                  <div onclick="showAnswerBlock('qb2', this) ;hideAnswerBlock('intro', this)"  class="answer-button"><a>Jaw-droppingly brilliant gifts</a></div>
                   <div onclick="showAnswerBlock('qb2', this)" class="answer-button"><a>Truly original decorations</a></div>
               </div>
+        </div>
 
-          <div class="question-block" id="qb2" style="visibility: hidden">
+          <div class="question-block" id="qb2" style="opacity: 0">
               <p class="banter">Ok so let's make your house a Pinterest-worthy festive paradise</p>
               <p class="question">Are you after:</p>
               <div class="answer-block">
@@ -30,7 +31,7 @@
                   <div onclick="showAnswerBlock('rb', this)" class="answer-button"><a>Fun for the night before</a></div>
               </div>
           </div>
-          <div class="results-block" id="rb" style="visibility: hidden">
+          <div class="results-block" id="rb" style="opacity: 0">
               <p class="banter">Well ho, ho, ho, you've come to just the right place!</p>
               <p class="question">How about one of these unique goodies?</p>
 

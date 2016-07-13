@@ -10,7 +10,7 @@ window.onload = function(){
     canvas.height = H;
 
     //snowflake particles
-    var mp = 25; //max particles
+    var mp = 100; //max particles
     var particles = [];
     for(var i = 0; i < mp; i++)
     {
@@ -86,8 +86,12 @@ window.onload = function(){
 }
 
 function showAnswerBlock(id, element) {
-    document.getElementById(id).style.visibility = 'visible';
+    document.getElementById(id).style.opacity = '1';
     element.classList.remove("answer-button");
     element.classList.add("answer-button-clicked");
+}
+
+function hideAnswerBlock(id, element) {
+    document.getElementById(id).style.display = 'none';
 }
 
