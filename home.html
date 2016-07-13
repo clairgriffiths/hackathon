@@ -2,20 +2,70 @@
 <html>
   <head>
     <title>Santa's little Helper</title>
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
+      <script type="text/javascript" src="logic.js"></script>
   </head>
   <body>
-    <h1>Santa's Little Helper</h1>
-    <h4>Who are you buying for?</h4>
-    <div style="background-color: aqua">
-        <button onclick="window.location.href='page2.html'">For Her</button><br>
-        <button>For Him</button><br>
-        <button>For Children</button><br>
-        <button>For Grandparents</button>
+    <div class="base">
+        <h1>Santa's Little Helper</h1>
+        <div class="question-block" id="qb1">
+            <h4 class="question">Question 1</h4>
+            <div class="answer-block">
+                <a class="answer-button" onclick="showAnswerBlock('qb2')">Answer1</a>
+                <a class="answer-button" onclick="showAnswerBlock('qb2')">Answer2</a>
+                <a class="answer-button" onclick="showAnswerBlock('qb2')">Answer3</a>
+                <a class="answer-button" onclick="showAnswerBlock('qb2')">Answer4</a>
+            </div>
+        </div>
+        <div class="question-block" id="qb2" style="visibility: hidden">
+            <h4 class="question">Question 2</h4>
+            <div class="answer-block">
+                <a class="answer-button" onclick="showAnswerBlock('qb3')">Answer1</a>
+                <a class="answer-button" onclick="showAnswerBlock('qb3')">Answer2</a>
+                <a class="answer-button" onclick="showAnswerBlock('qb3')">Answer3</a>
+                <a class="answer-button" onclick="showAnswerBlock('qb3')">Answer4</a>
+            </div>
+        </div>
+        <div class="question-block" id="qb3" style="visibility: hidden">
+            <h4 class="question">Question 3</h4>
+            <div class="answer-block">
+                <a class="answer-button" onclick="showAnswerBlock('qb4')">Answer1</a>
+                <a class="answer-button" onclick="showAnswerBlock('qb4')">Answer2</a>
+                <a class="answer-button" onclick="showAnswerBlock('qb4')">Answer3</a>
+                <a class="answer-button" onclick="showAnswerBlock('qb4')">Answer4</a>
+            </div>
+        </div>
+        <div class="question-block" id="qb4" style="visibility: hidden">
+            <h4 class="question">Question 4</h4>
+            <div class="answer-block">
+                <a class="answer-button" onclick="showAnswerBlock('rb')">Answer1</a>
+                <a class="answer-button" onclick="showAnswerBlock('rb')">Answer2</a>
+                <a class="answer-button" onclick="showAnswerBlock('rb')">Answer3</a>
+                <a class="answer-button" onclick="showAnswerBlock('rb')">Answer4</a>
+            </div>
+        </div>
+        <div class="results-block" id="rb" style="visibility: hidden">
+            <div class="result">
+                <img src="pics/nopic.jpg">
+                <p class="data"><strong>Name:</strong>Product1</p>
+                <p class="data"><strong>Price:</strong>£10.00</p>
+            </div>
+            <div class="result">
+                <img src="pics/nopic.jpg">
+                <p class="data"><strong>Name:</strong>Product2</p>
+                <p class="data"><strong>Price:</strong>£10.00</p>
+            </div>
+            <div class="result">
+                <img src="pics/nopic.jpg">
+                <p class="data"><strong>Name:</strong>Product3</p>
+                <p class="data"><strong>Price:</strong>£10.00</p>
+            </div>
+            <div class="result">
+                <img src="pics/nopic.jpg">
+                <p class="data"><strong>Name:</strong>Product4</p>
+                <p class="data"><strong>Price:</strong>£10.00</p>
+            </div>
+        </div>
     </div>
-    <!--<a href=#></a>
-    <a href=#></a>
-    <a href=#></a>
-    <a href=#></a>-->
   </body>
 </html>
