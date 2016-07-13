@@ -25,9 +25,16 @@ div.results-block{
 }
 
 div.result{
-
+  float: left;
+  margin:50px;
 }
 
+div.row{
+  margin-bottom: 30px;
+}
+p.data {
+  width:250px;
+}
 p.banter{
 
 }
@@ -37,6 +44,7 @@ p.question{
 }
 
 img.image {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
+  -webkit-box-shadow: 3px 3px 0 #d6d2ce;
 }
