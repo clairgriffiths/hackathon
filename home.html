@@ -17,17 +17,17 @@
           <div class="question-block" id="qb1">
               <p class="question">First things first. Are you looking for:</p>
               <div class="answer-block">
-                  <div class="answer-button"><a onclick="showAnswerBlock('qb2')">Jaw-droppingly brilliant gifts</a></div>
-                  <div class="answer-button"><a onclick="showAnswerBlock('qb2')">Truly original decorations</a></div>
+                  <div onclick="showAnswerBlock('qb2', this)" class="answer-button"><a>Jaw-droppingly brilliant gifts</a></div>
+                  <div onclick="showAnswerBlock('qb2', this)" class="answer-button"><a>Truly original decorations</a></div>
               </div>
           </div>
           <div class="question-block" id="qb2" style="visibility: hidden">
               <p class="banter">Ok so let's make your house a Pinterest-worthy festive paradise</p>
               <p class="question">Are you after:</p>
               <div class="answer-block">
-                  <div class="answer-button"><a onclick="showAnswerBlock('rb')">A spectacular new theme</a></div>
-                  <div class="answer-button"><a onclick="showAnswerBlock('rb')">Intriguing advent ideas</a></div>
-                  <div class="answer-button"><a onclick="showAnswerBlock('rb')">Fun for the night before</a></div>
+                  <div onclick="showAnswerBlock('rb', this)" class="answer-button"><a>A spectacular new theme</a></div>
+                  <div onclick="showAnswerBlock('rb', this)" class="answer-button"><a>Intriguing advent ideas</a></div>
+                  <div onclick="showAnswerBlock('rb', this)" class="answer-button"><a>Fun for the night before</a></div>
               </div>
           </div>
           <div class="results-block" id="rb" style="visibility: hidden">

@@ -85,7 +85,9 @@ window.onload = function(){
     setInterval(draw, 33);
 }
 
-function showAnswerBlock(id) {
+function showAnswerBlock(id, element) {
     document.getElementById(id).style.visibility = 'visible';
+    element.classList.remove("answer-button");
+    element.classList.add("answer-button-clicked");
 }
 

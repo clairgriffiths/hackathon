@@ -1,3 +1,7 @@
+body {
+  background:url(https://s3-eu-west-1.amazonaws.com/noths-prod-eu-west-1-campaigns/campaigns/images/xmas-2015/bg-navigation.jpg) center top no-repeat #fff
+}
+
 @font-face {
   font-family: 'NOTHS Sans No2 Regular';
   src: url('http://cdn.notonthehighstreet.com/stylesheets/fonts/noths_sans_2_regular.eot?#iefixage') format('embedded-opentype'),
@@ -31,13 +35,13 @@ div.base{
   width: 800px;
   padding: 10px;
   margin-top: 150px;
-  font-family: "NOTHS Sans No2 SemiBold","Helvetica Neue","HelveticaNeue",Arial,sans-serif;
+  font-family: "NOTHS Sans No2 Regular";
   font-size: large;
   text-transform: uppercase;
 }
 
 div.question-block{
-
+ margin-top: 50px;
 }
 
 div.answer-block{
@@ -67,6 +71,17 @@ p.question{
 
 }
 
+img.firstButton {
+  padding: 5px;
+  border: solid 1px #EFEFEF;
+}
+a:hover img.firstButton {
+  border: solid 1px #CCC;
+  -moz-box-shadow: 1px 1px 5px #999;
+  -webkit-box-shadow: 1px 1px 5px #999;
+  box-shadow: 1px 1px 5px #999;
+}
+
 img.image {
   width: 250px;
   height: 250px;
@@ -85,8 +100,17 @@ div.answer-button:hover{
   background: url("pics/button_hover.png");
 }
 
+div.answer-button-clicked{
+  background: url("pics/button_hover.png");
+  display: block;
+  height: 90px;
+  width: 600px;
+  position: relative;
+}
+
 div.answer-button a,
-div.answer-button a:hover{
+div.answer-button a:hover,
+div.answer-button-clicked a{
   position: absolute;
   top: 50%;
   left: 50%;
