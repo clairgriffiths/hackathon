@@ -1,6 +1,37 @@
 body {
-  text-align: center;
+  background:url(https://s3-eu-west-1.amazonaws.com/noths-prod-eu-west-1-campaigns/campaigns/images/xmas-2015/bg-navigation.jpg) center top no-repeat #fff
 }
-h1 {
-  color: red;
+
+div.base{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgray; /* CHANGE ME */
+  width: 800px;
+  padding: 10px;
+  margin-top: 220px;
+}
+
+div.question-block{
+
+}
+
+div.answer-block{
+
+}
+
+div.results-block{
+
+}
+
+div.result{
+
+}
+
+p.banter{
+
+}
+
+p.question{
+
 }
