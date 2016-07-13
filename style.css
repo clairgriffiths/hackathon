@@ -19,6 +19,7 @@
   url('http://cdn.notonthehighstreet.com/stylesheets/fonts/noths_sans_3_regular.ttf')  format('truetype');
 }
 body {
+  margin-top: -400px;
   background:url(https://s3-eu-west-1.amazonaws.com/noths-prod-eu-west-1-campaigns/campaigns/images/xmas-2015/bg-navigation.jpg) center top no-repeat #fff
 }
 
@@ -70,4 +71,25 @@ img.image {
   width: 250px;
   height: 250px;
   -webkit-box-shadow: 3px 3px 0 #d6d2ce;
+}
+
+div.answer-button{
+  display: block;
+  background: url("pics/button.png");
+  height: 90px;
+  width: 600px;
+  position: relative;
+}
+
+div.answer-button:hover{
+  background: url("pics/button_hover.png");
+}
+
+div.answer-button a,
+div.answer-button a:hover{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
