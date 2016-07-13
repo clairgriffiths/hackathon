@@ -6,52 +6,143 @@
       <script type="text/javascript" src="logic.js"></script>
   </head>
   <body>
-    <div class="base">
+    <script>
+          window.onload = function(){
+              //canvas init
+              var canvas = document.getElementById("canvas");
+              var ctx = canvas.getContext("2d");
+
+              //canvas dimensions
+              var W = window.innerWidth;
+              var H = window.innerHeight;
+              canvas.width = W;
+              canvas.height = H;
+
+              //snowflake particles
+              var mp = 25; //max particles
+              var particles = [];
+              for(var i = 0; i < mp; i++)
+              {
+                  particles.push({
+                      x: Math.random()*W, //x-coordinate
+                      y: Math.random()*H, //y-coordinate
+                      r: Math.random()*4+1, //radius
+                      d: Math.random()*mp //density
+                  })
+              }
+
+              //Lets draw the flakes
+              function draw()
+              {
+                  ctx.clearRect(0, 0, W, H);
+
+                  ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+                  ctx.beginPath();
+                  for(var i = 0; i < mp; i++)
+                  {
+                      var p = particles[i];
+                      ctx.moveTo(p.x, p.y);
+                      ctx.arc(p.x, p.y, p.r, 0, Math.PI*2, true);
+                  }
+                  ctx.fill();
+                  update();
+              }
+
+              //Function to move the snowflakes
+              //angle will be an ongoing incremental flag. Sin and Cos functions will be applied to it to create vertical and horizontal movements of the flakes
+              var angle = 0;
+              function update()
+              {
+                  angle += 0.01;
+                  for(var i = 0; i < mp; i++)
+                  {
+                      var p = particles[i];
+                      //Updating X and Y coordinates
+                      //We will add 1 to the cos function to prevent negative values which will lead flakes to move upwards
+                      //Every particle has its own density which can be used to make the downward movement different for each flake
+                      //Lets make it more random by adding in the radius
+                      p.y += Math.cos(angle+p.d) + 1 + p.r/2;
+                      p.x += Math.sin(angle) * 2;
+
+                      //Sending flakes back from the top when it exits
+                      //Lets make it a bit more organic and let flakes enter from the left and right also.
+                      if(p.x > W+5 || p.x < -5 || p.y > H)
+                      {
+                          if(i%3 > 0) //66.67% of the flakes
+                          {
+                              particles[i] = {x: Math.random()*W, y: -10, r: p.r, d: p.d};
+                          }
+                          else
+                          {
+                              //If the flake is exitting from the right
+                              if(Math.sin(angle) > 0)
+                              {
+                                  //Enter from the left
+                                  particles[i] = {x: -5, y: Math.random()*H, r: p.r, d: p.d};
+                              }
+                              else
+                              {
+                                  //Enter from the right
+                                  particles[i] = {x: W+5, y: Math.random()*H, r: p.r, d: p.d};
+                              }
+                          }
+                      }
+                  }
+              }
+
+              //animation loop
+              setInterval(draw, 33);
+          }
+      </script>
+    <canvas class="base" id="canvas" style="position: relative;margin-top: -300px">
+
+    </canvas>
+    <div class="base" style="margin-top: -400px">
         <h1>Santa's Little Helper</h1>
         <div class="intro">
-          <p class="banter">Season's greetings, Simon!</p>
-          <p class="banter">I'm your festive, friendly, automated elf-bot. Let's get Christmas sorted.</p>
+            <p class="banter">Season's greetings, Simon!</p>
+            <p class="banter">I'm your festive, friendly, automated elf-bot. Let's get Christmas sorted.</p>
         </div>
-          <div class="question-block" id="qb1">
-              <p class="question">First things first. Are you looking for:</p>
-              <div class="answer-block">
-                  <a class="answer-button" onclick="showAnswerBlock('qb2')">Jaw-droppingly brilliant gifts</a></br>
-                  <a class="answer-button" onclick="showAnswerBlock('qb2')">Truly original decorations</a>
-              </div>
-          </div>
-          <div class="question-block" id="qb2" style="visibility: hidden">
-              <p class="banter">Ok so let's make your house a Pinterest-worthy festive paradise</p>
-              <p class="question">Are you after:</p>
-              <div class="answer-block">
-                  <a class="answer-button" onclick="showAnswerBlock('rb')">A spectacular new theme</a></br>
-                  <a class="answer-button" onclick="showAnswerBlock('rb')">Intriguing advent ideas</a></br>
-                  <a class="answer-button" onclick="showAnswerBlock('rb')">Fun for the night before</a>
-              </div>
-          </div>
-          <div class="results-block" id="rb" style="visibility: hidden">
-              <p class="banter">Well ho, ho, ho, you've come to just the right place!</p>
-              <p class="question">How about one of these unique goodies?</p>
-              <div class="result">
-                  <img src="pics/beer_advent_calendar.jpeg">
-                  <p class="data"><strong>A Best of British, personalise craft beer advent calendar</strong></p>
-                  <p class="data"><strong>Price:</strong>£10.00</p>
-              </div>
-              <div class="result">
-                  <img src="pics/sprout_advent_calendar.jpg">
-                  <p class="data"><strong>A chocolate sprout advent calendar from Quirky Gift Library</strong></p>
-                  <p class="data"><strong>Price:</strong>£10.00</p>
-              </div>
-              <div class="result">
-                  <img src="pics/coffee_advent_calendar.jpg">
-                  <p class="data"><strong>A coffee advent calendar</strong></p>
-                  <p class="data"><strong>Price:</strong>£10.00</p>
-              </div>
-              <div class="result">
-                  <img src="pics/balloon_advent_calendar.jpg">
-                  <p class="data"><strong>A balloon advent calendar</strong></p>
-                  <p class="data"><strong>Price:</strong>£10.00</p>
-              </div>
-          </div>
+        <div class="question-block" id="qb1">
+            <p class="question">First things first. Are you looking for:</p>
+            <div class="answer-block">
+                <a class="answer-button" onclick="showAnswerBlock('qb2')">Jaw-droppingly brilliant gifts</a></br>
+                <a class="answer-button" onclick="showAnswerBlock('qb2')">Truly original decorations</a>
+            </div>
+        </div>
+        <div class="question-block" id="qb2" style="visibility: hidden">
+            <p class="banter">Ok so let's make your house a Pinterest-worthy festive paradise</p>
+            <p class="question">Are you after:</p>
+            <div class="answer-block">
+                <a class="answer-button" onclick="showAnswerBlock('rb')">A spectacular new theme</a></br>
+                <a class="answer-button" onclick="showAnswerBlock('rb')">Intriguing advent ideas</a></br>
+                <a class="answer-button" onclick="showAnswerBlock('rb')">Fun for the night before</a>
+            </div>
+        </div>
+        <div class="results-block" id="rb" style="visibility: hidden">
+            <p class="banter">Well ho, ho, ho, you've come to just the right place!</p>
+            <p class="question">How about one of these unique goodies?</p>
+            <div class="result">
+                <img src="pics/beer_advent_calendar.jpeg">
+                <p class="data"><strong>A Best of British, personalise craft beer advent calendar</strong></p>
+                <p class="data"><strong>Price:</strong>£10.00</p>
+            </div>
+            <div class="result">
+                <img src="pics/sprout_advent_calendar.jpg">
+                <p class="data"><strong>A chocolate sprout advent calendar from Quirky Gift Library</strong></p>
+                <p class="data"><strong>Price:</strong>£10.00</p>
+            </div>
+            <div class="result">
+                <img src="pics/coffee_advent_calendar.jpg">
+                <p class="data"><strong>A coffee advent calendar</strong></p>
+                <p class="data"><strong>Price:</strong>£10.00</p>
+            </div>
+            <div class="result">
+                <img src="pics/balloon_advent_calendar.jpg">
+                <p class="data"><strong>A balloon advent calendar</strong></p>
+                <p class="data"><strong>Price:</strong>£10.00</p>
+            </div>
+        </div>
     </div>
   </body>
 </html>
