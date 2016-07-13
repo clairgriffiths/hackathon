@@ -2,26 +2,26 @@
 <html>
   <head>
     <title>Santa's little Helper</title>
-    <link rel="stylesheet" type="text/css" href="../style.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
       <script type="text/javascript" src="logic.js"></script>
   </head>
   <body>
     <div class="base">
         <h1>Santa's Little Helper</h1>
         <div class="intro">
-          <h4 class="banter">Season's greetings, Simon!</h4>
-          <h4 class="banter">I'm your festive, friendly, automated elf-bot. Let's get Christmas sorted.</h4>
+          <p class="banter">Season's greetings, Simon!</p>
+          <p class="banter">I'm your festive, friendly, automated elf-bot. Let's get Christmas sorted.</p>
         </div>
           <div class="question-block" id="qb1">
-              <h4 class="question">First things first. Are you looking for:</h4>
+              <p class="question">First things first. Are you looking for:</p>
               <div class="answer-block">
                   <a class="answer-button" onclick="showAnswerBlock('qb2')">Jaw-droppingly brilliant gifts</a></br>
                   <a class="answer-button" onclick="showAnswerBlock('qb2')">Truly original decorations</a>
               </div>
           </div>
           <div class="question-block" id="qb2" style="visibility: hidden">
-            <h4 class="banter">Ok so let's make your house a Pinterest-worthy festive paradise</h4>
-              <h4 class="question">Are you after:</h4>
+              <p class="banter">Ok so let's make your house a Pinterest-worthy festive paradise</p>
+              <p class="question">Are you after:</p>
               <div class="answer-block">
                   <a class="answer-button" onclick="showAnswerBlock('rb')">A spectacular new theme</a></br>
                   <a class="answer-button" onclick="showAnswerBlock('rb')">Intriguing advent ideas</a></br>
@@ -29,8 +29,8 @@
               </div>
           </div>
           <div class="results-block" id="rb" style="visibility: hidden">
-              <h4 class="banter">Well ho, ho, ho, you've come to just the right place!</h4>
-              <h4 class="question">How about one of these unique goodies?</h4>
+              <p class="banter">Well ho, ho, ho, you've come to just the right place!</p>
+              <p class="question">How about one of these unique goodies?</p>
               <div class="result">
                   <img src="pics/nopic.jpg">
                   <p class="data"><strong>A Best of British, personalise craft beer advent calendar</strong>Product1</p>

@@ -1,6 +1,36 @@
 body {
-  text-align: center;
+  background-color: white; /* CHANGE ME */
 }
-h1 {
-  color: red;
+
+div.base{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgray; /* CHANGE ME */
+  width: 800px;
+  padding: 10px;
+}
+
+div.question-block{
+
+}
+
+div.answer-block{
+
+}
+
+div.results-block{
+
+}
+
+div.result{
+
+}
+
+p.banter{
+
+}
+
+p.question{
+
 }
