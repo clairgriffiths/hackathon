@@ -1,5 +1,5 @@
 body {
-  background-color: white; /* CHANGE ME */
+  background:url(https://s3-eu-west-1.amazonaws.com/noths-prod-eu-west-1-campaigns/campaigns/images/xmas-2015/bg-navigation.jpg) center top no-repeat #fff
 }
 
 div.base{
@@ -9,6 +9,7 @@ div.base{
   background-color: lightgray; /* CHANGE ME */
   width: 800px;
   padding: 10px;
+  margin-top: 220px;
 }
 
 div.question-block{
