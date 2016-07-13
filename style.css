@@ -6,10 +6,10 @@ div.base{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: lightgray; /* CHANGE ME */
+  background-color: transparent; /* CHANGE ME */
   width: 800px;
   padding: 10px;
-  margin-top: 220px;
+  margin-top: 150px;
 }
 
 div.question-block{
