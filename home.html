@@ -8,64 +8,50 @@
   <body>
     <div class="base">
         <h1>Santa's Little Helper</h1>
-        <div class="question-block" id="qb1">
-            <h4 class="question">Question 1</h4>
-            <div class="answer-block">
-                <a class="answer-button" onclick="showAnswerBlock('qb2')">Answer1</a>
-                <a class="answer-button" onclick="showAnswerBlock('qb2')">Answer2</a>
-                <a class="answer-button" onclick="showAnswerBlock('qb2')">Answer3</a>
-                <a class="answer-button" onclick="showAnswerBlock('qb2')">Answer4</a>
-            </div>
+        <div class="intro">
+          <h4 class="banter">Season's greetings, Simon!</h4>
+          <h4 class="banter">I'm your festive, friendly, automated elf-bot. Let's get Christmas sorted.</h4>
         </div>
-        <div class="question-block" id="qb2" style="visibility: hidden">
-            <h4 class="question">Question 2</h4>
-            <div class="answer-block">
-                <a class="answer-button" onclick="showAnswerBlock('qb3')">Answer1</a>
-                <a class="answer-button" onclick="showAnswerBlock('qb3')">Answer2</a>
-                <a class="answer-button" onclick="showAnswerBlock('qb3')">Answer3</a>
-                <a class="answer-button" onclick="showAnswerBlock('qb3')">Answer4</a>
-            </div>
-        </div>
-        <div class="question-block" id="qb3" style="visibility: hidden">
-            <h4 class="question">Question 3</h4>
-            <div class="answer-block">
-                <a class="answer-button" onclick="showAnswerBlock('qb4')">Answer1</a>
-                <a class="answer-button" onclick="showAnswerBlock('qb4')">Answer2</a>
-                <a class="answer-button" onclick="showAnswerBlock('qb4')">Answer3</a>
-                <a class="answer-button" onclick="showAnswerBlock('qb4')">Answer4</a>
-            </div>
-        </div>
-        <div class="question-block" id="qb4" style="visibility: hidden">
-            <h4 class="question">Question 4</h4>
-            <div class="answer-block">
-                <a class="answer-button" onclick="showAnswerBlock('rb')">Answer1</a>
-                <a class="answer-button" onclick="showAnswerBlock('rb')">Answer2</a>
-                <a class="answer-button" onclick="showAnswerBlock('rb')">Answer3</a>
-                <a class="answer-button" onclick="showAnswerBlock('rb')">Answer4</a>
-            </div>
-        </div>
-        <div class="results-block" id="rb" style="visibility: hidden">
-            <div class="result">
-                <img src="pics/nopic.jpg">
-                <p class="data"><strong>Name:</strong>Product1</p>
-                <p class="data"><strong>Price:</strong>£10.00</p>
-            </div>
-            <div class="result">
-                <img src="pics/nopic.jpg">
-                <p class="data"><strong>Name:</strong>Product2</p>
-                <p class="data"><strong>Price:</strong>£10.00</p>
-            </div>
-            <div class="result">
-                <img src="pics/nopic.jpg">
-                <p class="data"><strong>Name:</strong>Product3</p>
-                <p class="data"><strong>Price:</strong>£10.00</p>
-            </div>
-            <div class="result">
-                <img src="pics/nopic.jpg">
-                <p class="data"><strong>Name:</strong>Product4</p>
-                <p class="data"><strong>Price:</strong>£10.00</p>
-            </div>
-        </div>
+          <div class="question-block" id="qb1">
+              <h4 class="question">First things first. Are you looking for:</h4>
+              <div class="answer-block">
+                  <a class="answer-button" onclick="showAnswerBlock('qb2')">Jaw-droppingly brilliant gifts</a></br>
+                  <a class="answer-button" onclick="showAnswerBlock('qb2')">Truly original decorations</a>
+              </div>
+          </div>
+          <div class="question-block" id="qb2" style="visibility: hidden">
+            <h4 class="banter">Ok so let's make your house a Pinterest-worthy festive paradise</h4>
+              <h4 class="question">Are you after:</h4>
+              <div class="answer-block">
+                  <a class="answer-button" onclick="showAnswerBlock('rb')">A spectacular new theme</a></br>
+                  <a class="answer-button" onclick="showAnswerBlock('rb')">Intriguing advent ideas</a></br>
+                  <a class="answer-button" onclick="showAnswerBlock('rb')">Fun for the night before</a>
+              </div>
+          </div>
+          <div class="results-block" id="rb" style="visibility: hidden">
+              <h4 class="banter">Well ho, ho, ho, you've come to just the right place!</h4>
+              <h4 class="question">How about one of these unique goodies?</h4>
+              <div class="result">
+                  <img src="pics/nopic.jpg">
+                  <p class="data"><strong>A Best of British, personalise craft beer advent calendar</strong>Product1</p>
+                  <p class="data"><strong>Price:</strong>£10.00</p>
+              </div>
+              <div class="result">
+                  <img src="pics/nopic.jpg">
+                  <p class="data"><strong>A chocolate sprout advent calendar from Quirky Gift Library</strong>Product2</p>
+                  <p class="data"><strong>Price:</strong>£10.00</p>
+              </div>
+              <div class="result">
+                  <img src="pics/nopic.jpg">
+                  <p class="data"><strong>A chocolate sprout advent calendar from Quirky Gift Library</strong>Product3</p>
+                  <p class="data"><strong>Price:</strong>£10.00</p>
+              </div>
+              <div class="result">
+                  <img src="pics/nopic.jpg">
+                  <p class="data"><strong>A chocolate sprout advent calendar from Quirky Gift Library</strong>Product4</p>
+                  <p class="data"><strong>Price:</strong>£10.00</p>
+              </div>
+          </div>
     </div>
   </body>
 </html>
