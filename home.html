@@ -14,7 +14,7 @@
           <p class="banter">Season's greetings, Simon!</p>
           <p class="banter">I'm your festive, friendly, automated elf-bot. Let's get Christmas sorted.</p>
 
-
+          <!-- Question 1 both paths -->
               <p class="banter">First things first. Are you looking for:</p>
               <div class="answer-block t6">
                   <div onclick="showAnswerBlock('qb2', this)"  class="answer-button"><a>Jaw-droppingly brilliant gifts</a></div>
@@ -22,7 +22,7 @@
               </div>
         </div>
 
-          <div class="question-block" id="qb2" style="opacity: 0; display:none;">
+          <div class="question-block" id="qb2" style="opacity: 0">
               <p class="banter">Ok so let's make your house a Pinterest-worthy festive paradise</p>
               <p class="banter">Are you after:</p>
               <div class="answer-block t3">
@@ -31,7 +31,9 @@
                   <div onclick="showAnswerBlock('rb', this)" class="answer-button"><a>Fun for the night before</a></div>
               </div>
           </div>
-          <div class="results-block" id="rb" style="opacity: 0; display:none;">
+
+          <!-- Result 1st path -->
+          <div class="results-block" id="rb" style="opacity: 0">
               <p class="banter">Well ho, ho, ho, you've come to just the right place!</p>
               <p class="banter">How about one of these unique goodies?</p>
 
@@ -70,6 +72,7 @@
                     </a>
                   </div>
           </div>
+
     </div>
   </body>
 </html>
