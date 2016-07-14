@@ -37,11 +37,12 @@ div.base{
   margin-top: 150px;
   font-family: "NOTHS Sans No2 Regular";
   font-size: large;
-  text-transform: uppercase;
 }
 
 div.question-block{
- margin-top: 50px;
+  margin-top: 20px;
+  border-top: 1px solid #000;
+  padding-top: 10px;
 }
 
 div.answer-block{
@@ -49,12 +50,23 @@ div.answer-block{
 }
 
 div.results-block{
-
+  margin-top: 20px;
+  border-top: 1px solid #000;
+  padding-top: 10px;
 }
 
 div.result{
   float: left;
   margin:50px;
+  background-color: rgb(246, 245, 243);
+  box-shadow: rgb(214, 210, 206) 3px 3px 0px 0px;
+  padding: 20px;
+  width: 250px;
+  height: 375px;
+}
+
+div.result:hover{
+  background-color: rgb(252, 252, 252);
 }
 
 div.row{
@@ -62,6 +74,7 @@ div.row{
 }
 p.data {
   width:250px;
+  color: black;
 }
 p.banter{
 
