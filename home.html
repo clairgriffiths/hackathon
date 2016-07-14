@@ -1,79 +1,79 @@
 <!DOCTYPE html >
 <html>
-  <head>
+<head>
     <title>Santa's little Helper</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
-      <script type="text/javascript" src="logic.js"></script>
-  </head>
-  <body>
-  <div id="container" style="position: relative">
+    <script type="text/javascript" src="logic.js"></script>
+</head>
+<body>
+<div id="container" style="position: relative">
     <canvas class="base" id="canvas" style="margin-top: -420px">
     </canvas>
     <div class="base" id="base" style="position: relative;">
         <img src="pics/ttl-santas-little-helper.png" alt="Title">
         <div class="intro question-block" id="intro">
-          <p class="banter">Season's greetings!</p>
-          <p class="banter">I'm your festive, friendly, automated elf-bot. Let's get Christmas sorted.</p>
+            <p class="banter">Season's greetings!</p>
+            <p class="banter">I'm your festive, friendly, automated elf-bot. Let's get Christmas sorted.</p>
 
-          <!-- Question 1 both paths -->
-              <p class="banter">First things first. Are you looking for:</p>
-              <div class="answer-block t6">
-                  <div onclick="showAnswerBlock('qb2', this)"  class="answer-button"><a>Jaw-droppingly brilliant gifts</a></div>
-                  <div onclick="showAnswerBlock('qb2', this)" class="answer-button"><a>Truly original decorations</a></div>
-              </div>
+            <!-- Question 1 both paths -->
+            <p class="banter">First things first. Are you looking for:</p>
+            <div class="answer-block t6">
+                <div onclick="showAnswerBlock('qb2', this)"  class="answer-button"><a>Jaw-droppingly brilliant gifts</a></div>
+                <div onclick="showAnswerBlock('qb2', this)" class="answer-button"><a>Truly original decorations</a></div>
+            </div>
         </div>
 
-          <div class="question-block" id="qb2" style="opacity: 0; display: none;">
-              <p class="banter">Ok so let's make your house a Pinterest-worthy festive paradise</p>
-              <p class="banter">Are you after:</p>
-              <div class="answer-block t3">
-                  <div onclick="showAnswerBlock('rb', this)" class="answer-button"><a>A spectacular new theme</a></div>
-                  <div onclick="showAnswerBlock('rb', this)" class="answer-button"><a>Intriguing advent ideas</a></div>
-                  <div onclick="showAnswerBlock('rb', this)" class="answer-button"><a>Fun for the night before</a></div>
-              </div>
-          </div>
+        <div class="question-block" id="qb2" style="opacity: 0; display: none;">
+            <p class="banter">Ok so let's make your house a Pinterest-worthy festive paradise</p>
+            <p class="banter">Are you after:</p>
+            <div class="answer-block t3">
+                <div onclick="showAnswerBlock('rb', this)" class="answer-button"><a>A spectacular new theme</a></div>
+                <div onclick="showAnswerBlock('rb', this)" class="answer-button"><a>Intriguing advent ideas</a></div>
+                <div onclick="showAnswerBlock('rb', this)" class="answer-button"><a>Fun for the night before</a></div>
+            </div>
+        </div>
 
-          <!-- Result 1st path -->
-          <div class="results-block" id="rb" style="opacity: 0; display: none;">
-              <p class="banter">Well ho, ho, ho, you've come to just the right place!</p>
-              <p class="banter">How about one of these unique goodies?</p>
+        <!-- Result 1st path -->
+        <div class="results-block" id="rb" style="opacity: 0; display: none;">
+            <p class="banter">Well ho, ho, ho, you've come to just the right place!</p>
+            <p class="banter">How about one of these unique goodies?</p>
 
-                <div class="results-products t3">
+            <div class="results-products t3">
 
-                    <a href="http://preview.notonthehighstreet.com/bestofbritishbeer/product/personalised-beer-advent-calendar ">
-                      <div class="result">
-                          <img src="pics/beer_advent_calendar.jpeg" class="image">
-                          <p class="data"><strong>Personalised Beer Advent Calendar</strong></p>
-                          <p class="data">by Best of British Beer</p>
-                      </div>
-                    </a>
-                    <a href="http://preview.notonthehighstreet.com/thechocolatelibrary/product/eat-your-greens-chocolate-sprouts-advent-calendar ">
-                      <div class="result">
+                <a href="http://preview.notonthehighstreet.com/bestofbritishbeer/product/personalised-beer-advent-calendar ">
+                    <div class="result">
+                        <img src="pics/beer_advent_calendar.jpeg" class="image">
+                        <p class="data"><strong>Personalised Beer Advent Calendar</strong></p>
+                        <p class="data">by Best of British Beer</p>
+                    </div>
+                </a>
+                <a href="http://preview.notonthehighstreet.com/thechocolatelibrary/product/eat-your-greens-chocolate-sprouts-advent-calendar ">
+                    <div class="result">
                         <img src="pics/sprout_advent_calendar.jpg" class="image">
                         <p class="data"><strong>Eat Your Greens Chocolate Sprouts Advent Calendar</strong></p>
                         <p class="data">by Quirky gift library</p>
-                      </div>
-                    </a>
+                    </div>
+                </a>
 
 
-                  <div class="row">
+                <div class="row">
                     <a href="http://preview.notonthehighstreet.com/perkulatte/product/coffee-advent-calendar  ">
-                      <div class="result">
-                          <img src="pics/coffee_advent_calendar.jpg" class="image">
-                          <p class="data"><strong>Coffee Advent calendar</strong></p>
-                          <p class="data">by Perkulatte</p>
-                      </div>
+                        <div class="result">
+                            <img src="pics/coffee_advent_calendar.jpg" class="image">
+                            <p class="data"><strong>Coffee Advent calendar</strong></p>
+                            <p class="data">by Perkulatte</p>
+                        </div>
                     </a>
                     <a href="http://preview.notonthehighstreet.com/catsprintshop/product/ombre-balloon-advent-calendar  ">
-                      <div class="result">
-                        <img src="pics/balloon_advent_calendar.jpg" class="image">
-                        <p class="data"><strong>Ombre Balloon Advent Calendar</strong></p>
-                        <p class="data">by Luna Studio Designs</p>
-                      </div>
+                        <div class="result">
+                            <img src="pics/balloon_advent_calendar.jpg" class="image">
+                            <p class="data"><strong>Ombre Balloon Advent Calendar</strong></p>
+                            <p class="data">by Luna Studio Designs</p>
+                        </div>
                     </a>
-                  </div>
-          </div>
+                </div>
+            </div>
         </div>
-  </div>
-  </body>
+    </div>
+</body>
 </html>
