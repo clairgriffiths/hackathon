@@ -45,10 +45,6 @@ div.question-block{
   padding-top: 10px;
 }
 
-div.answer-block{
-
-}
-
 div.results-block{
   margin-top: 20px;
   border-top: 1px solid #111;
@@ -61,6 +57,7 @@ div.results-products{
   animation-duration: 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  height: 1000px;
 }
 
 div.result{
@@ -211,4 +208,8 @@ div.answer-button-clicked a{
 #container canvas, #base {
   margin-top: 600px;
   position: absolute;
+}
+
+div.footer{
+  margin-bottom: 100px;
 }

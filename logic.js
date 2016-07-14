@@ -85,14 +85,40 @@ window.onload = function(){
     setInterval(draw, 33);
 }
 
+function scrollTo(duration) {
+    var toPos = (document.body.offsetHeight + 300) - window.innerHeight;
+    var diff = toPos - document.body.scrollTop;
+    var scrollStep = Math.PI / (duration / 10);
+    var count = 0, currPos;
+    start = document.body.scrollTop;
+    console.log("scrolTop=" + document.body.scrollTop + " toPos ="+ toPos );
+    scrollInterval = setInterval(function(){
+        if (document.body.scrollTop != toPos) {
+            count = count + 1;
+            currPos = start + diff * (0.5 - 0.5 * Math.cos(count * scrollStep));
+            document.body.scrollTop = currPos;
+            console.log("scrolTop=" + document.body.scrollTop + " toPos ="+ toPos);
+        }
+        else { clearInterval(scrollInterval); }
+    },10);
+}
+
 function showAnswerBlock(id, element) {
-    document.getElementById(id).style.opacity = '1';
-    document.getElementById(id).style.display = 'block';
+    var target = document.getElementById(id);
+    target.style.opacity = '1';
+    target.style.display = 'block';
     element.classList.remove("answer-button");
     element.classList.add("answer-button-clicked");
+    scrollTo(1000);
 }
 
 function hideAnswerBlock(id, element) {
     document.getElementById(id).style.display = 'none';
 }
+
+function restart(){
+    window.location.reload(false);
+}
+
+
 
