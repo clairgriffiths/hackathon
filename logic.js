@@ -85,8 +85,8 @@ window.onload = function(){
     setInterval(draw, 33);
 }
 
-function scrollTo(duration) {
-    var toPos = (document.body.offsetHeight + 300) - window.innerHeight;
+function scrollToBottom(duration, offset) {
+    var toPos = (document.body.offsetHeight + offset) - window.innerHeight;
     var diff = toPos - document.body.scrollTop;
     var scrollStep = Math.PI / (duration / 10);
     var count = 0, currPos;
@@ -109,7 +109,11 @@ function showAnswerBlock(id, element) {
     target.style.display = 'block';
     element.classList.remove("answer-button");
     element.classList.add("answer-button-clicked");
-    scrollTo(1000);
+    var offset = 300;
+    if(id == "p1rb" || id == "p2rb"){
+        offset = -300;
+    }
+    scrollToBottom(1000, offset);
 }
 
 function hideAnswerBlock(id, element) {
