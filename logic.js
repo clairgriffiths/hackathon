@@ -87,6 +87,7 @@ window.onload = function(){
 
 function showAnswerBlock(id, element) {
     document.getElementById(id).style.opacity = '1';
+    document.getElementById(id).style.display = 'block';
     element.classList.remove("answer-button");
     element.classList.add("answer-button-clicked");
 }
