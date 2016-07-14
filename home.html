@@ -14,7 +14,7 @@
           <p class="banter">Season's greetings, Simon!</p>
           <p class="banter">I'm your festive, friendly, automated elf-bot. Let's get Christmas sorted.</p>
 
-
+          <!-- Question 1 both paths -->
               <p class="banter">First things first. Are you looking for:</p>
               <div class="answer-block">
                   <div onclick="showAnswerBlock('qb2', this)"  class="answer-button"><a>Jaw-droppingly brilliant gifts</a></div>
@@ -22,6 +22,7 @@
               </div>
         </div>
 
+        <!-- Question 2 1st path -->
           <div class="question-block" id="qb2" style="opacity: 0">
               <p class="banter">Ok so let's make your house a Pinterest-worthy festive paradise</p>
               <p class="question">Are you after:</p>
@@ -31,10 +32,11 @@
                   <div onclick="showAnswerBlock('rb', this)" class="answer-button"><a>Fun for the night before</a></div>
               </div>
           </div>
+
+          <!-- Result 1st path -->
           <div class="results-block" id="rb" style="opacity: 0">
               <p class="banter">Well ho, ho, ho, you've come to just the right place!</p>
               <p class="question">How about one of these unique goodies?</p>
-
 
                 <a href="http://preview.notonthehighstreet.com/bestofbritishbeer/product/personalised-beer-advent-calendar ">
                   <div class="result">
@@ -50,7 +52,6 @@
                     <p class="data">by Quirky gift library</p>
                   </div>
                 </a>
-
 
               <div class="row">
                 <a href="http://preview.notonthehighstreet.com/perkulatte/product/coffee-advent-calendar  ">
@@ -68,8 +69,93 @@
                   </div>
                 </a>
               </div>
-
           </div>
+
+          <!-- Question 2 2nd path -->
+          <div class="question-block" id="qb2" style="opacity: 0">
+              <p class="banter">Splendid!</p>
+              <p class="question">So are you buying for:</p>
+              <div class="answer-block">
+                  <div onclick="showAnswerBlock('qb3', this)" class="answer-button"><a>A grown-up person</a></div>
+                  <div onclick="showAnswerBlock('qb3', this)" class="answer-button"><a>A little person</a></div>
+              </div>
+          </div>
+
+          <!-- Question 3 2nd path -->
+          <div class="question-block" id="qb3" style="opacity: 0">
+              <p class="banter">Grand.</p>
+              <p class="question">And is this grown-up a:</p>
+              <div class="answer-block">
+                  <div onclick="showAnswerBlock('qb4', this)" class="answer-button"><a>Lady person</a></div>
+                  <div onclick="showAnswerBlock('qb4', this)" class="answer-button"><a>Man type</a></div>
+              </div>
+          </div>
+
+          <!-- Question 4 2nd path -->
+          <div class="question-block" id="qb4" style="opacity: 0">
+              <p class="banter">Fandabydozy</p>
+              <p class="question">And is she:</p>
+              <div class="answer-block">
+                  <div onclick="showAnswerBlock('qb5', this)" class="answer-button"><a>Your bestie</a></div>
+                  <div onclick="showAnswerBlock('qb5', this)" class="answer-button"><a>Mum</a></div>
+                  <div onclick="showAnswerBlock('qb5', this)" class="answer-button"><a>Grandma</a></div>
+                  <div onclick="showAnswerBlock('qb5', this)" class="answer-button"><a>Wife or Girlfriend</a></div>
+                  <div onclick="showAnswerBlock('qb5', this)" class="answer-button"><a>A new mum</a></div>
+                  <div onclick="showAnswerBlock('qb5', this)" class="answer-button"><a>An elf-bot</a></div>
+              </div>
+          </div>
+
+          <div class="question-block" id="qb5" style="opacity: 0">
+              <p class="banter">Now we're getting close</p>
+              <p class="question">Is this lovely lady:</p>
+              <div class="answer-block">
+                  <div onclick="showAnswerBlock('rb2', this)" class="answer-button"><a>Up for trying fun, new things</a></div>
+                  <div onclick="showAnswerBlock('rb2', this)" class="answer-button"><a>Queen of the kitchen</a></div>
+                  <div onclick="showAnswerBlock('rb2', this)" class="answer-button"><a>A jewellery magpie</a></div>
+                  <div onclick="showAnswerBlock('rb2', this)" class="answer-button"><a>Passionate about pampering</a></div>
+                  <div onclick="showAnswerBlock('rb2', this)" class="answer-button"><a>Game for a laugh</a></div>
+                  <div onclick="showAnswerBlock('rb2, this)" class="answer-button"><a>Fond of a tipple</a></div>
+              </div>
+          </div>
+
+          <!-- Result 2nd path -->
+          <div class="results-block" id="rb2" style="opacity: 0">
+              <p class="banter">She sounds great! Let's really surprise her this year.</p>
+              <p class="question">How about one of these brand new experiences?</p>
+
+                <a href="http://preview.notonthehighstreet.com/bestofbritishbeer/product/personalised-beer-advent-calendar ">
+                  <div class="result">
+                      <img src="pics/beer_advent_calendar.jpeg" class="image">
+                      <p class="data"><strong>Personalised Beer Advent Calendar</strong></p>
+                      <p class="data">by Best of British Beer</p>
+                  </div>
+                </a>
+                <a href="http://preview.notonthehighstreet.com/thechocolatelibrary/product/eat-your-greens-chocolate-sprouts-advent-calendar ">
+                  <div class="result">
+                    <img src="pics/sprout_advent_calendar.jpg" class="image">
+                    <p class="data"><strong>Eat Your Greens Chocolate Sprouts Advent Calendar</strong></p>
+                    <p class="data">by Quirky gift library</p>
+                  </div>
+                </a>
+
+              <div class="row">
+                <a href="http://preview.notonthehighstreet.com/perkulatte/product/coffee-advent-calendar  ">
+                  <div class="result">
+                      <img src="pics/coffee_advent_calendar.jpg" class="image">
+                      <p class="data"><strong>Coffee Advent calendar</strong></p>
+                      <p class="data">by Perkulatte</p>
+                  </div>
+                </a>
+                <a href="http://preview.notonthehighstreet.com/catsprintshop/product/ombre-balloon-advent-calendar  ">
+                  <div class="result">
+                    <img src="pics/balloon_advent_calendar.jpg" class="image">
+                    <p class="data"><strong>Ombre Balloon Advent Calendar</strong></p>
+                    <p class="data">by Luna Studio Designs</p>
+                  </div>
+                </a>
+              </div>
+          </div>
+
     </div>
   </body>
 </html>
